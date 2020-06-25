@@ -1,0 +1,102 @@
+.container-grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 300px 150px 50px;
+    
+}
+
+.header{
+    background: royalblue;
+    text-align: center;
+    font: normal 40px arial;
+    color: white;
+    
+}
+.main{
+    background:rgb(88, 163, 88);
+    text-align: center;
+    font: normal 40px arial;
+    color: white;
+}
+.widget{
+    background:rgb(196, 107, 196);
+    text-align: center;
+    font: normal 40px arial;
+    color: white;
+}
+.footer{
+    background: rgb(83, 83, 192);
+    text-align: center;
+    font: normal 40px arial;
+    color: white;
+}
+
+/* Media query */
+
+@media (min-width: 1024px) {
+
+    .container-grid{
+        display: grid;
+        height: 100%;
+        grid-gap: 3px;
+        grid-template-columns: repeat (12, 1fr);
+        grid-template-rows: 50px 300px 150px 50px;
+        grid-template-areas: 
+        "h m m m m m m m m m m m"
+        "h m m m m m m m m m m m"
+        "h w w w w w w w w w w w"
+        "h f f f f f f f f f f f";
+    }
+    
+    .header{
+        background: royalblue;
+        grid-area: h;
+        
+    }
+    .main{
+        background:rgb(88, 163, 88);
+        grid-area: m;
+    }
+    .widget{
+        background:rgb(196, 107, 196);
+        grid-area: w;
+    }
+    .footer{
+        background: rgb(83, 83, 192);
+        grid-area: f;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container-grid{
+        display: grid;
+        height: 100%;
+        grid-gap: 3px;
+        grid-template-columns: repeat (12, 1fr);
+        grid-template-rows: 50px 300px 150px 50px;
+        grid-template-areas: 
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h f f f f f f f f f f w";
+    }
+    
+    .header{
+        background: royalblue;
+        grid-area: h;
+        
+    }
+    .main{
+        background:rgb(88, 163, 88);
+        grid-area: m;
+    }
+    .widget{
+        background:rgb(196, 107, 196);
+        grid-area: w;
+    }
+    .footer{
+        background: rgb(83, 83, 192);
+        grid-area: f;
+    }
+}
